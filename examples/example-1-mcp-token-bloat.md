@@ -5,8 +5,10 @@ A full walkthrough of the playbook loop using a real problem: Claude sessions ea
 ## The loop, visualized
 
 ```
-Problem hit → Issue raised → Triage → Investigate → Fix → Doc PR → Issue closed → Doc shared
+Problem hit → Issue raised (unlabeled) → Maintainer adds category → Investigate → Fix → Doc PR → Issue closed (solved) → Doc shared
 ```
+
+> New issues land **unlabeled** — that *is* the triage queue. A maintainer adds a category label (`mcp`, `skills`, `cost`, `workflows`, `tooling`) within 24h and moves it to `investigating` once someone owns it.
 
 ---
 
@@ -19,20 +21,19 @@ Dev on the team notices a new project is blowing through context fast. They open
 **Body (filled-in template):**
 
 ```markdown
-## What were you trying to do?
-Refactor a client Next.js project. Had GitHub, Figma, Linear, Sentry, and our internal CRM MCPs enabled.
-
-## What went wrong?
-First user message burned 42,800 input tokens. Claude became sluggish after 3-4 turns
-and started dropping instructions. Cost for a single debugging session hit $8.
+## What happened
+Refactoring a client Next.js project with GitHub, Figma, Linear, Sentry, and our
+internal CRM MCPs enabled. First user message burned 42,800 input tokens before
+any real work. Claude became sluggish after 3-4 turns and dropped instructions.
+One debugging session cost $8.
 
 ## Environment
 - Model: claude-opus-4-6
 - Surface: Claude Code
-- MCPs enabled: github, figma, linear, sentry, reversebits-crm
+- MCPs / plugins / skills active: github, figma, linear, sentry, reversebits-crm
 - OS: macOS 14.5
 
-## Reproduction
+## Repro
 1. Enable all 5 MCPs
 2. Open Claude Code in any project
 3. Send a one-word message
@@ -43,21 +44,21 @@ and started dropping instructions. Cost for a single debugging session hit $8.
 - Disabling one MCP at a time to identify heaviest offender
 
 ## Impact
-Blocks delivery. We can't run long-form refactors without running out of context.
+Blocks delivery. Can't run long-form refactors without running out of context.
 ```
 
-**Labels applied:** `problem`, `mcp`, `cost`, `triage`, `p1`
+**Labels on submission:** none — issue templates deliberately ship without labels so the unlabeled queue *is* the triage list.
 
 ---
 
 ## Step 2 — Triage (within 24 hours)
 
-Maintainer moves `triage` → `investigating`, assigns owner, comments:
+Maintainer reviews the issue, adds category labels, assigns an owner, comments:
 
 > Splitting this. Part A: measure per-MCP cost. Part B: propose a baseline config.
 > Owner: @tapan. ETA: end of week.
 
-Adds `investigating` label. Moves card to "Investigating" column on project board.
+**Labels added:** `mcp`, `cost`, `investigating`. Project board moves the card from **Backlog** (no labels) → **In progress** (`investigating`).
 
 ---
 
@@ -185,7 +186,7 @@ Closes #14
 
 - PR merged. Commit squashed, message: `docs(mcp): baseline + on-demand config pattern (closes #14)`
 - Issue auto-closes via `Closes #14`
-- Issue labels updated: remove `investigating`, `triage` → add `solved`
+- Issue labels updated: remove `investigating` → add `solved` (keep category labels `mcp`, `cost` for searchability)
 - Final comment on issue:
 
 > Solved. See [docs/mcp/baseline-config-pattern.md](../../blob/main/docs/mcp/baseline-config-pattern.md).

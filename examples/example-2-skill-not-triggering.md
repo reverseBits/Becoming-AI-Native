@@ -15,11 +15,9 @@ Team built a custom `client-onboarding` skill with a detailed SKILL.md that walk
 **Body:**
 
 ```markdown
-## What were you trying to do?
-Kick off onboarding for a new client using the custom skill we shipped last week.
-
-## What went wrong?
-Typed all of these — skill never loaded, Claude just responded conversationally:
+## What happened
+Tried to kick off onboarding for Acme using our custom skill. Typed all of these —
+skill never loaded, Claude just responded conversationally:
 - "start onboarding for Acme"
 - "onboard Acme"
 - "new client onboarding"
@@ -28,19 +26,26 @@ Typed all of these — skill never loaded, Claude just responded conversationall
 Only `/client-onboarding` (slash command) worked.
 
 ## Environment
+- Model: claude-opus-4-6
 - Surface: Cowork + Claude Code
-- Skill location: /skills/client-onboarding/SKILL.md
-- Description: "A comprehensive 12-step onboarding workflow for new agency clients."
+- MCPs / plugins / skills active: client-onboarding skill at /skills/client-onboarding/SKILL.md
+  (description: "A comprehensive 12-step onboarding workflow for new agency clients.")
+- OS: macOS 14.5
+
+## Repro
+1. Open Cowork in a fresh session
+2. Type "onboard Acme"
+3. Observe: generic chat response, no skill load
 
 ## What you already tried
 - Reworded the skill description 3 ways
 - Restarted Cowork
 
 ## Impact
-Team isn't using the skill. Defeating the point of having built it.
+Team isn't using the skill. Defeats the point of having built it.
 ```
 
-**Labels:** `problem`, `skills`, `triage`, `p2`
+**Labels on submission:** none. Maintainer adds `skills` on triage, then `investigating` once owned. No priority labels — ordering happens on the project board.
 
 ---
 
@@ -128,7 +133,7 @@ put detail there, not in the description.
 
 ## Step 5 — Close
 
-- Merge, close #22 with `solved` label
+- Merge, close #22 — swap `investigating` for `solved` (keep `skills` category)
 - Post in Discussions → Q&A: "TL;DR — if your skill isn't triggering, rewrite the description as a retrieval prompt. Template + doc here."
 
 ---
