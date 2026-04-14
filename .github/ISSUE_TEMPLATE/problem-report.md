@@ -1,31 +1,30 @@
 ---
 name: Problem report
-about: Something broke or is painful in your AI-native workflow
+about: Something broke or is painful in your AI-native workflow. Start here — this is the default.
 title: "[Problem] "
 labels: ["problem", "triage"]
 ---
 
-## What were you trying to do?
+<!-- Keep it short. 3 filled sections is enough to file. Add more as you investigate. -->
 
-<!-- Task, client context, scope -->
+## What happened
 
-## What went wrong?
-
-<!-- Error, unexpected behavior, cost blow-up, context overflow, etc. -->
+<!-- One or two lines. What were you doing, what went wrong. -->
 
 ## Environment
 
 - Model:
-- Claude surface: Claude Code / Cowork / Desktop / API
-- MCPs enabled:
-- Plugins/skills active:
+- Surface: Claude Code / Cowork / Desktop / API
+- MCPs / plugins / skills active:
 - OS:
 
-## Reproduction
+## Repro
 
 1.
 2.
 3.
+
+<!-- Optional below -->
 
 ## What you already tried
 

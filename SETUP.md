@@ -1,31 +1,14 @@
-# One-time repo setup
+# Repo setup (one-time)
 
-## 1. Create the repo
+You already created the repo on GitHub. These are the steps to configure it.
 
-```bash
-gh repo create reversebits/ai-native-agency-playbook \
-  --public \
-  --description "Open playbook for agencies going AI-native. Problems, fixes, workflows — tracked in the open." \
-  --homepage "https://reversebits.tech"
-```
-
-## 2. Push these files
-
-```bash
-cd ai-native-agency-playbook
-# copy README.md, CONTRIBUTING.md, labels.md, SETUP.md, .github/, docs/ into place
-git add .
-git commit -m "Initial playbook structure"
-git push origin main
-```
-
-## 3. Enable Discussions
+## 1. Enable Discussions
 
 `Settings → General → Features → Discussions → Enable`
 
 Create categories: Announcements, Q&A, Tool suggestions, Workflows, Show & tell.
 
-## 4. Create labels (run from repo root)
+## 2. Create labels (from repo root)
 
 ```bash
 # Category
@@ -38,6 +21,7 @@ gh label create workflows --color 8c564b --description "Delivery patterns"
 gh label create tooling --color 17becf --description "IDEs, eval, observability"
 gh label create team --color e377c2 --description "Hiring, onboarding, review"
 gh label create clients --color bcbd22 --description "Pricing, scoping, SoWs"
+gh label create meta --color 6e6e6e --description "Changes to this repo itself"
 
 # Status
 gh label create triage --color ededed
@@ -61,23 +45,23 @@ gh label create p2 --color fbca04
 gh label create p3 --color c2e0c6
 ```
 
-## 5. Create the project board
+## 3. Project board
 
 ```bash
-gh project create --owner reversebits --title "Playbook tracker"
+gh project create --owner reverseBits --title "Playbook tracker"
 ```
 
-Columns: Backlog · Investigating · Blocked · Solved.
+Columns: **Backlog · Investigating · Blocked · Solved**.
 
-## 6. (Optional) Front with Mintlify or GitBook
+## 4. (Optional) Front with Mintlify or GitBook
 
 - **Mintlify**: point at `/docs`, deploy to `docs.reversebits.tech`.
 - **GitBook**: connect the repo via GitHub Sync, free for public spaces.
 
-## 7. Seed issues
+## 5. Seed issues
 
-Open 5-10 real problems you're already tracking internally. Close two of them with links to the seed docs to show the loop working.
+Open 5-10 real problems you're already tracking internally. Close two with links to the seed docs (`docs/mcp/token-consumption.md`, `docs/skills/configuration-basics.md`) to show the loop working.
 
-## 8. Announce
+## 6. Announce
 
-Short post linking the repo, pinning the two seed docs, and inviting PRs. Cross-post to your Discord/Slack communities.
+Short post linking the repo, pinning the two seed docs, inviting PRs. Cross-post to your Discord/Slack.

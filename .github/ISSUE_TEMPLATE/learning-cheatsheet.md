@@ -1,6 +1,6 @@
 ---
-name: Learning / cheatsheet
-about: Share an insight, cheatsheet, or reusable snippet
+name: Learning / insight
+about: Share an insight, tip, or reusable snippet worth capturing
 title: "[Learning] "
 labels: ["learning", "triage"]
 ---
@@ -17,6 +17,6 @@ labels: ["learning", "triage"]
 
 <!-- Your own experiment, a talk, docs link, etc. -->
 
-## Suggested doc path
+## Suggested doc path (if promote-worthy)
 
 `/docs/<category>/<slug>.md`

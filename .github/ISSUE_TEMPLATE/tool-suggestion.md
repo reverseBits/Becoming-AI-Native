@@ -11,17 +11,13 @@ Name + link:
 
 ## Problem it solves
 
-<!-- Which tracked problem or category does this address? Link issues if any. -->
+<!-- Which category or existing issue does this address? Link if relevant. -->
 
 ## Cost
 
 - Pricing:
-- Token impact (if MCP/skill):
+- Token / context impact (if MCP/skill):
 - Vendor lock-in risk:
-
-## Alternatives considered
-
--
 
 ## Evidence it works
 
