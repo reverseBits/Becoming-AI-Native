@@ -47,9 +47,9 @@ A problem starts as an issue. When it's solved, the fix lands as a doc in `/docs
 
 ## Categories we track
 
-`mcp` · `skills` · `plugins` · `context` · `cost` · `workflows` · `tooling` · `team` · `clients`
+`mcp` · `skills` · `cost` · `workflows` · `tooling`
 
-Full definitions in [MAINTAINING.md](./MAINTAINING.md).
+New categories get created only when an issue genuinely doesn't fit. Full definitions in [MAINTAINING.md](./MAINTAINING.md).
 
 ---
 

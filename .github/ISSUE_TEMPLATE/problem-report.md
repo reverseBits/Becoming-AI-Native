@@ -2,7 +2,7 @@
 name: Problem report
 about: Something broke or is painful in your AI-native workflow. Start here — this is the default.
 title: "[Problem] "
-labels: ["problem", "triage"]
+labels: []
 ---
 
 <!-- Keep it short. 3 filled sections is enough to file. Add more as you investigate. -->
@@ -33,3 +33,5 @@ labels: ["problem", "triage"]
 ## Impact
 
 <!-- Blocks delivery / costs money / annoying / intermittent -->
+
+<!-- Maintainer will add a category label: mcp / skills / cost / workflows / tooling -->

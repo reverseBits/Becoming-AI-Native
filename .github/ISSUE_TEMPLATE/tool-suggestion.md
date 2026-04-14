@@ -2,7 +2,7 @@
 name: Tool suggestion
 about: Propose a tool, MCP, library, or service worth evaluating
 title: "[Tool] "
-labels: ["tool-suggestion", "triage"]
+labels: ["tool-suggestion"]
 ---
 
 ## Tool

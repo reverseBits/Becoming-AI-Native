@@ -2,7 +2,7 @@
 name: Learning / insight
 about: Share an insight, tip, or reusable snippet worth capturing
 title: "[Learning] "
-labels: ["learning", "triage"]
+labels: ["learning"]
 ---
 
 ## One-line takeaway

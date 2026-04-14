@@ -2,7 +2,7 @@
 name: Workflow proposal
 about: Propose a repeatable workflow for agency delivery
 title: "[Workflow] "
-labels: ["workflow", "triage"]
+labels: ["workflows"]
 ---
 
 ## Workflow name

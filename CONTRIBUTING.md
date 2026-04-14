@@ -27,7 +27,7 @@ Docs should be:
 
 ## Proposing structural changes
 
-Templates, labels, categories, or process changes → open an issue with the `meta` label. Discuss before PRing.
+Templates, labels, categories, or process changes → open an issue with `[Meta]` in the title and mention maintainers. Discuss before PRing.
 
 ---
 
